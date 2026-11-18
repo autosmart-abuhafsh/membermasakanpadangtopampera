@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-maroon: #8E1118;
+    --color-maroon-dark: #6B0C11;
+    --color-gold: #D9B432;
+    --color-gold-light: #F3E4A8;
+    --color-cream: #F7F3EF;
+    --color-brown: #391C19;
+    --color-soft-gray: #F3F3F3;
+  }
+
+  body {
+    background-color: #F7F3EF;
+    color: #391C19;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, .font-display {
+    font-family: 'Fraunces', Georgia, serif;
+  }
+
+  .font-mono-tabular {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* CR80 ID Card Standard Dimensions (85.6mm x 54mm -> aspect ratio ~1.585) */
+.cr80-card {
+  width: 100%;
+  max-width: 428px;
+  aspect-ratio: 85.6 / 54;
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #printable-area,
+  #printable-area * {
+    visibility: visible;
+  }
+
+  #printable-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #FFFFFF !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .cr80-print-card {
+    width: 85.6mm !important;
+    height: 54mm !important;
+    max-width: 85.6mm !important;
+    border-radius: 3.18mm !important;
+    page-break-inside: avoid;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}

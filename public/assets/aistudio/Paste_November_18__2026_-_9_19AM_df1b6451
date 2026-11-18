@@ -1,0 +1,956 @@
+# PRODUCT REQUIREMENTS DOCUMENT (PRD)
+# TOP AMPERA – LOYALTY & MEMBER POINT SYSTEM
+### Sistem Membership, Reward Poin, Ranking Pelanggan, dan Penghargaan Loyalitas
+**Brand:** Top Ampera – Masakan Padang Kota Wisata Batu  
+**Jenis Aplikasi:** Web Application – Loyalty Membership Management System  
+**Platform:** Mobile Responsive & Desktop  
+**Target Pengguna:** Pemilik, Admin, Kasir/Staff, dan Member/Pelanggan
+
+---
+
+# 1. LATAR BELAKANG
+
+Top Ampera merupakan usaha kuliner masakan Padang di Kota Wisata Batu yang ingin membangun hubungan jangka panjang dengan pelanggan melalui program loyalitas (Customer Loyalty Program).
+
+Aplikasi ini dibuat untuk memberikan pengalaman membership kepada pelanggan. Setiap pelanggan yang telah menjadi member dapat mengumpulkan poin dari pembelian makanan di Top Ampera.
+
+Poin yang terkumpul dapat ditukarkan dengan berbagai keuntungan, seperti:
+- Gratis 1 porsi nasi Padang.
+- Gratis es teh.
+- Gratis menu pilihan tertentu.
+- Diskon pembelian.
+- Bonus atau hadiah khusus lainnya.
+
+Pemilik usaha dapat mengatur sendiri kebijakan poin, hadiah, ketentuan penukaran, pengumuman, serta penghargaan pelanggan melalui dashboard admin.
+
+Selain itu, sistem dapat mengidentifikasi pelanggan yang paling sering berkunjung dan memberikan peringkat Top 1, Top 2, dan Top 3 sebagai bentuk apresiasi kepada pelanggan setia.
+
+# 2. TUJUAN APLIKASI
+
+1. Membangun sistem membership digital untuk pelanggan Top Ampera.
+2. Meningkatkan loyalitas dan frekuensi kunjungan pelanggan.
+3. Memberikan poin setiap kali pelanggan melakukan pembelian.
+4. Memberikan hadiah berdasarkan jumlah poin yang terkumpul.
+5. Memantau pelanggan yang paling aktif dan paling sering berkunjung.
+6. Memberikan penghargaan kepada pelanggan loyal setiap bulan.
+7. Menyediakan kartu member digital yang bisa dicetak secara profesional.
+8. Mempermudah penyampaian informasi dan pengumuman kepada seluruh member.
+9. Menyediakan laporan aktivitas dan perkembangan program loyalty.
+
+# 3. IDENTITAS VISUAL DAN BRANDING
+
+Gunakan gambar website Top Ampera yang diberikan sebagai referensi utama desain aplikasi.
+
+## Palet Warna
+
+Gunakan kombinasi warna yang menggambarkan identitas restoran Padang yang elegan, hangat, premium, dan menggugah selera.
+
+- Maroon / Merah Tua: #8E1118
+- Gold / Kuning Keemasan: #D9B432
+- Cream: #F7F3EF
+- Putih: #FFFFFF
+- Dark Brown: #391C19
+- Soft Gray: #F3F3F3
+
+Warna utama aplikasi:
+- Maroon sebagai warna identitas dan tombol utama.
+- Gold sebagai warna poin, reward, pencapaian, dan penghargaan.
+- Cream sebagai warna latar belakang.
+- Putih sebagai warna kartu dan konten.
+- Dark Brown sebagai warna teks pendukung.
+
+## Gaya Desain
+
+Gunakan desain:
+- Premium modern restaurant membership.
+- Elegant dan clean.
+- Minimalis tetapi memiliki karakter kuat.
+- Responsive untuk smartphone, tablet, dan desktop.
+- Rounded corners yang elegan.
+- Subtle shadow dan animasi transisi.
+- Ikon profesional dan mudah dipahami.
+- Dashboard dengan visualisasi data.
+- Tipografi modern dan mudah dibaca.
+
+Jangan membuat desain seperti aplikasi administrasi biasa. Aplikasi harus terasa seperti produk membership restoran profesional.
+
+# 4. STRUKTUR PENGGUNA DAN HAK AKSES
+
+Buat sistem login dengan 3 jenis pengguna utama.
+
+## A. OWNER / SUPER ADMIN
+
+Pemilik Top Ampera mempunyai akses penuh terhadap seluruh sistem.
+
+Hak akses:
+- Melihat seluruh data member.
+- Menambah, mengedit, menonaktifkan, dan menghapus member dengan pencatatan aktivitas.
+- Melihat seluruh transaksi pembelian.
+- Mengatur kebijakan poin.
+- Mengatur hadiah dan penukaran poin.
+- Mengatur kategori reward.
+- Mengatur periode dan sistem ranking.
+- Menetapkan penghargaan Top 1, Top 2, dan Top 3.
+- Membuat pengumuman.
+- Mengelola desain dan penerbitan kartu member.
+- Melihat laporan statistik.
+- Mengekspor data.
+- Mengatur akun admin dan kasir.
+- Melihat riwayat aktivitas admin dan kasir.
+
+## B. ADMIN / KASIR
+
+Hak akses sesuai izin yang diberikan oleh Owner.
+
+Fitur:
+- Melihat data member.
+- Mencari member melalui nama, ID, atau nomor telepon.
+- Memverifikasi transaksi pembelian.
+- Menyetujui permintaan penambahan poin.
+- Memproses penukaran reward.
+- Melihat riwayat transaksi.
+- Membantu pelanggan mendaftar member.
+- Melihat ranking pelanggan.
+
+Kasir tidak boleh mengubah kebijakan poin utama tanpa izin Owner.
+
+## C. MEMBER / PELANGGAN
+
+Member dapat login ke akun masing-masing.
+
+Fitur:
+- Melihat kartu member digital.
+- Melihat ID member.
+- Melihat jumlah poin.
+- Melihat riwayat pengumpulan poin.
+- Mengajukan penambahan poin setiap kali membeli.
+- Melihat daftar hadiah yang tersedia.
+- Mengajukan penukaran poin.
+- Melihat ranking pelanggan.
+- Membaca pengumuman.
+- Melihat informasi program loyalty.
+- Mengedit informasi profil tertentu.
+
+# 5. FITUR UTAMA APLIKASI
+
+## A. DASHBOARD ADMIN
+
+Buat dashboard utama yang menampilkan informasi secara real-time.
+
+Bagian ringkasan statistik:
+
+1. Total Member.
+2. Member Aktif.
+3. Total Transaksi Member.
+4. Total Kunjungan.
+5. Total Poin yang Telah Diberikan.
+6. Total Poin yang Telah Ditukarkan.
+7. Total Reward yang Telah Diklaim.
+8. Member Baru Bulan Ini.
+
+Tambahkan grafik:
+- Pertumbuhan jumlah member.
+- Aktivitas kunjungan pelanggan per bulan.
+- Grafik pengumpulan poin.
+- Grafik penukaran reward.
+- Perbandingan aktivitas member.
+
+Tambahkan bagian:
+- Member Terbaru.
+- Transaksi Terbaru.
+- Permintaan Poin Menunggu Verifikasi.
+- Permintaan Reward Menunggu Persetujuan.
+- Top 3 Member Paling Loyal.
+
+Semua statistik harus berasal dari database, bukan angka dummy.
+
+## B. MANAJEMEN MEMBER
+
+Buat halaman manajemen data member dengan tampilan tabel profesional.
+
+Kolom data:
+- Nomor.
+- ID Member.
+- Foto Profil (opsional).
+- Nama Lengkap.
+- Nomor WhatsApp.
+- Tanggal Bergabung.
+- Total Poin.
+- Total Kunjungan.
+- Status Member.
+- Aksi.
+
+Fitur:
+- Tambah member.
+- Edit data member.
+- Detail member.
+- Nonaktifkan member.
+- Pencarian data.
+- Filter status.
+- Filter tanggal bergabung.
+- Pagination.
+- Export data.
+
+Setiap member harus mendapatkan ID unik secara otomatis.
+
+Contoh format:
+TA-0001  
+TA-0002  
+TA-0003
+
+Nomor member tidak boleh berubah meskipun data profil diperbarui.
+
+Status member:
+- Active.
+- Inactive.
+- Suspended.
+
+Satu nomor WhatsApp tidak boleh digunakan untuk membuat akun member ganda.
+
+## C. MEMBER CARD DIGITAL
+
+Ini merupakan salah satu fitur utama aplikasi.
+
+Setiap member mempunyai kartu identitas digital yang dapat dibuka setelah login.
+
+### Desain Kartu
+
+Buat desain kartu member profesional dengan kombinasi:
+- Maroon.
+- Gold.
+- Cream.
+- Putih.
+
+Gunakan identitas brand Top Ampera.
+
+Bagian depan kartu:
+- Logo Top Ampera.
+- Tulisan TOP AMPERA MEMBER.
+- Nama member.
+- ID Member.
+- QR Code unik.
+- Tanggal bergabung.
+- Label Loyalty Member.
+
+Bagian belakang kartu:
+- Slogan singkat Top Ampera.
+- Informasi program loyalty.
+- Ketentuan penggunaan kartu.
+- Informasi kontak atau alamat restoran jika tersedia.
+
+### Fitur Kartu
+
+- Kartu digital dapat dilihat dari dashboard member.
+- QR Code unik untuk setiap member.
+- QR Code terhubung dengan profil member.
+- Tombol Download Kartu.
+- Tombol Cetak Kartu.
+- Kartu dapat dibuat dalam format PDF.
+- Kartu harus memiliki tampilan depan dan belakang.
+- Desain harus siap dicetak.
+- Ukuran kartu mengikuti standar ID Card CR80, yaitu sekitar 85,6 × 54 mm.
+- Tersedia preview sebelum mencetak.
+
+Buat layout cetak yang tidak terpotong dan menghasilkan kartu dengan kualitas profesional.
+
+QR Code tidak boleh menampilkan informasi sensitif. QR hanya digunakan sebagai identitas atau kode verifikasi member.
+
+## D. SISTEM LOYALTY POINT
+
+Ini adalah inti utama aplikasi.
+
+Setiap member berhak mendapatkan poin setiap melakukan pembelian makanan atau minuman di Top Ampera.
+
+### Pengaturan Kebijakan Poin
+
+Buat halaman khusus di dashboard admin bernama:
+
+**Loyalty Point Settings**
+
+Pemilik dapat membuat dan mengubah kebijakan poin kapan saja tanpa perlu mengubah source code.
+
+Sediakan pilihan metode perhitungan poin:
+
+**Metode 1 – Berdasarkan Nominal Pembelian**
+
+Contoh:
+- Setiap pembelian Rp25.000 mendapatkan 1 poin.
+- Setiap pembelian Rp25.000 mendapatkan 3 poin.
+- Setiap pembelian Rp25.000 mendapatkan 5 poin.
+
+Semua angka tersebut dapat diedit.
+
+Contoh perhitungan jika kebijakan yang aktif adalah setiap Rp25.000 mendapatkan 2 poin:
+
+- Belanja Rp25.000 = 2 poin.
+- Belanja Rp50.000 = 4 poin.
+- Belanja Rp75.000 = 6 poin.
+- Belanja Rp100.000 = 8 poin.
+
+Sistem harus menyediakan pengaturan pembulatan. Secara default, hanya kelipatan nominal penuh yang dihitung (pembulatan ke bawah).
+
+**Metode 2 – Berdasarkan Rentang Nominal**
+
+Admin dapat membuat aturan sendiri.
+
+Contoh:
+- Rp10.000–Rp24.999 = 1 poin.
+- Rp25.000–Rp49.999 = 3 poin.
+- Rp50.000–Rp99.999 = 5 poin.
+- Rp100.000 ke atas = 10 poin.
+
+Nominal dan jumlah poin sepenuhnya dapat diedit.
+
+**Metode 3 – Poin Khusus Menu**
+
+Admin dapat menentukan menu tertentu yang mempunyai poin tambahan.
+
+Contoh:
+- Pembelian Rendang = Bonus 2 poin.
+- Pembelian Ayam Bakar = Bonus 1 poin.
+- Pembelian Paket Spesial = Bonus 5 poin.
+
+Fitur metode menu dapat diaktifkan atau dinonaktifkan.
+
+### Pengaturan Tambahan
+
+Admin dapat mengatur:
+- Minimal nominal pembelian untuk mendapatkan poin.
+- Jumlah poin per transaksi.
+- Bonus poin khusus.
+- Periode promo poin ganda.
+- Batas maksimal poin per transaksi.
+- Masa berlaku poin.
+- Apakah poin bisa kedaluwarsa atau tidak.
+- Apakah seluruh transaksi member memenuhi syarat kunjungan.
+- Ketentuan khusus program loyalty.
+
+Perubahan kebijakan berlaku untuk transaksi baru dan tidak mengubah transaksi lama secara otomatis.
+
+## E. FITUR TAMBAH POIN OLEH MEMBER
+
+Member harus memiliki tombol khusus di dashboard:
+
+**+ CATAT PEMBELIAN / TAMBAH POIN**
+
+Alur penggunaannya:
+
+1. Member datang dan melakukan pembelian di Top Ampera.
+2. Member login ke aplikasi.
+3. Member menekan tombol Catat Pembelian.
+4. Member mengisi nominal transaksi.
+5. Member dapat memilih menu yang dibeli jika diperlukan.
+6. Sistem menghitung estimasi poin secara otomatis.
+7. Member menekan tombol Kirim Permintaan.
+8. Permintaan masuk ke dashboard kasir/admin dengan status Pending.
+9. Kasir memeriksa transaksi dan mengonfirmasi pembelian.
+10. Setelah disetujui, poin otomatis masuk ke saldo member.
+11. Riwayat transaksi diperbarui.
+
+Sediakan opsi upload foto struk sebagai bukti pembelian.
+
+### Validasi Keamanan
+
+Member tidak boleh dapat menambah poin ke saldo sendiri secara langsung tanpa verifikasi.
+
+Buat mekanisme:
+- Status Pending.
+- Status Approved.
+- Status Rejected.
+- Status Cancelled.
+
+Hanya transaksi yang disetujui yang mendapatkan poin.
+
+Kasir dapat melakukan verifikasi dengan cara:
+- Membuka daftar pengajuan.
+- Memindai QR Code member.
+- Memeriksa nominal dan bukti pembelian.
+- Menyetujui atau menolak permintaan.
+
+Sediakan juga fitur kasir untuk membuat transaksi langsung atas nama member melalui pencarian ID atau pemindaian QR.
+
+Setiap transaksi memiliki kode transaksi unik dan hanya dapat diberikan poin satu kali.
+
+## F. RIWAYAT TRANSAKSI DAN POIN
+
+Buat halaman riwayat transaksi untuk member dan admin.
+
+Informasi:
+- ID transaksi.
+- Tanggal dan jam.
+- Nominal pembelian.
+- Rincian menu jika tersedia.
+- Poin yang diperoleh.
+- Status transaksi.
+- Petugas verifikasi.
+
+Member dapat melihat seluruh riwayat poin.
+
+Buat sistem point ledger agar seluruh perubahan poin tercatat secara terperinci.
+
+Jenis aktivitas:
+- Earned Points.
+- Bonus Points.
+- Redeemed Points.
+- Point Adjustment.
+- Expired Points.
+- Reversal Points.
+
+Admin tidak boleh mengubah saldo poin secara langsung tanpa membuat catatan transaksi penyesuaian dan alasan perubahan.
+
+## G. REWARD / PENUKARAN HADIAH
+
+Buat halaman bernama:
+
+**Rewards & Benefits**
+
+Admin dapat membuat, mengedit, dan menghapus berbagai hadiah.
+
+Contoh reward awal (hanya contoh, seluruh ketentuan bisa diedit):
+
+| Hadiah | Poin Dibutuhkan |
+|---|---:|
+| Gratis Es Teh | 10 Poin |
+| Gratis 1 Porsi Nasi Padang | 30 Poin |
+| Gratis Menu Pilihan | 50 Poin |
+| Voucher Diskon | 75 Poin |
+| Reward Spesial Top Ampera | 100 Poin |
+
+Admin bisa mengubah:
+- Nama hadiah.
+- Deskripsi hadiah.
+- Gambar hadiah.
+- Jumlah poin yang diperlukan.
+- Stok hadiah.
+- Periode berlaku.
+- Batas penukaran per member.
+- Status aktif/nonaktif.
+- Syarat dan ketentuan.
+
+### Alur Penukaran Reward
+
+1. Member membuka halaman Rewards.
+2. Member melihat daftar hadiah.
+3. Member memilih hadiah.
+4. Sistem memeriksa kecukupan poin.
+5. Member menekan tombol Tukarkan Reward.
+6. Permintaan masuk ke dashboard admin/kasir.
+7. Kasir melakukan verifikasi.
+8. Jika disetujui, poin dikurangi otomatis.
+9. Sistem membuat kode penukaran unik.
+10. Hadiah diberikan kepada member.
+
+Pastikan saldo poin tidak dapat menjadi negatif dan satu reward tidak dapat digunakan berulang kali dengan kode yang sama.
+
+Tampilkan status:
+- Available.
+- Pending.
+- Approved.
+- Redeemed.
+- Rejected.
+- Expired.
+
+## H. CUSTOMER RANKING – TOP 1, TOP 2, TOP 3
+
+Buat fitur ranking pelanggan untuk mengetahui siapa yang paling sering datang ke Top Ampera.
+
+Nama fitur:
+
+**TOP AMPERA LOYAL CUSTOMER**
+
+Ranking ini harus berdasarkan jumlah kunjungan yang sudah diverifikasi, bukan hanya banyaknya poin.
+
+### Tampilan Ranking
+
+Buat desain leaderboard yang menarik.
+
+Tampilkan tiga pelanggan teratas:
+
+- TOP 1 – Gold / Mahkota Emas.
+- TOP 2 – Silver.
+- TOP 3 – Bronze.
+
+Informasi yang ditampilkan:
+- Foto profil atau avatar.
+- Nama member.
+- ID member.
+- Total kunjungan.
+- Total poin.
+- Periode penilaian.
+
+Buat tampilan podium khusus untuk Top 3.
+
+Member lainnya dapat melihat daftar ranking sesuai izin publikasi yang diatur admin.
+
+### Pengaturan Ranking
+
+Admin dapat mengatur:
+- Ranking bulanan.
+- Ranking tahunan.
+- Ranking sepanjang waktu.
+- Periode awal dan akhir perhitungan.
+- Jumlah kunjungan sebagai indikator utama.
+- Total poin sebagai indikator tambahan.
+- Aturan jika terdapat nilai kunjungan yang sama.
+- Apakah nama member ditampilkan secara publik.
+
+Hanya transaksi yang telah disetujui dan memenuhi syarat yang dihitung sebagai kunjungan.
+
+Sediakan batasan kunjungan yang dapat dikonfigurasi agar satu kunjungan tidak dapat dipecah menjadi banyak transaksi hanya untuk mengejar ranking.
+
+### Sistem Penghargaan
+
+Admin dapat membuat penghargaan secara fleksibel.
+
+Contoh:
+- Juara 1: Voucher makan gratis.
+- Juara 2: Gratis 1 porsi nasi Padang.
+- Juara 3: Gratis minuman.
+
+Hadiah tersebut dapat diubah kapan saja.
+
+Sediakan fitur:
+- Tetapkan pemenang.
+- Simpan riwayat pemenang.
+- Tandai hadiah sudah diberikan.
+- Catatan penghargaan.
+- Publikasi pengumuman pemenang.
+
+Sistem ranking harus menghitung ulang berdasarkan transaksi yang tervalidasi dan tidak boleh menghapus riwayat penghargaan periode sebelumnya.
+
+## I. ANNOUNCEMENT CENTER – PENGUMUMAN
+
+Buat halaman khusus pengumuman untuk menghubungkan pihak Top Ampera dengan seluruh member.
+
+Admin bisa membuat pengumuman.
+
+Jenis pengumuman:
+- Informasi program loyalty.
+- Promo khusus member.
+- Bonus poin.
+- Promo tanggal tertentu.
+- Informasi menu baru.
+- Pengumuman pemenang ranking.
+- Informasi operasional restoran.
+- Informasi penting lainnya.
+
+Fitur:
+- Tambah pengumuman.
+- Edit pengumuman.
+- Hapus atau arsipkan pengumuman.
+- Upload gambar.
+- Judul dan isi informasi.
+- Tanggal publikasi.
+- Tanggal berakhir.
+- Pengumuman prioritas/pinned.
+- Status Draft atau Published.
+- Target penerima seluruh member atau kelompok tertentu.
+
+Member mendapatkan halaman pengumuman di dashboard masing-masing.
+
+Buat desain seperti news feed profesional dengan gambar, tanggal, judul, dan ringkasan informasi.
+
+## J. DASHBOARD MEMBER
+
+Buat dashboard pelanggan yang sederhana, menarik, dan nyaman digunakan melalui smartphone.
+
+Bagian utama:
+
+**1. Greeting**
+- Halo, [Nama Member].
+- Selamat datang di Top Ampera Loyalty.
+
+**2. Digital Member Card**
+- Menampilkan kartu member.
+- Tombol lihat kartu.
+- Tombol download PDF.
+
+**3. Point Balance**
+- Total saldo poin.
+- Poin yang diperoleh.
+- Poin yang sudah ditukarkan.
+
+**4. Tombol Utama**
+- Catat Pembelian.
+- Tukarkan Reward.
+- Lihat Riwayat Poin.
+
+**5. Loyalty Progress**
+Tampilkan progress menuju hadiah berikutnya.
+
+Contoh:
+Saldo saat ini 22 poin.
+Target reward 30 poin.
+Kurang 8 poin lagi untuk mendapatkan gratis 1 porsi nasi Padang.
+
+**6. Ranking**
+- Posisi ranking saat ini.
+- Jumlah kunjungan.
+- Informasi Top 3 Member.
+
+**7. Pengumuman**
+Menampilkan informasi terbaru dari Top Ampera.
+
+**8. Riwayat Aktivitas**
+Menampilkan transaksi dan aktivitas poin terbaru.
+
+# 6. PENGATURAN PROGRAM LOYALTY
+
+Buat halaman pengaturan pusat agar Owner dapat mengendalikan seluruh kebijakan program.
+
+Menu pengaturan:
+
+1. General Settings.
+2. Point Policy.
+3. Reward Settings.
+4. Ranking Settings.
+5. Visit Validation.
+6. Member Settings.
+7. Membership Card Settings.
+8. Announcement Settings.
+9. Account & Role Management.
+10. Activity Logs.
+
+Pastikan setiap pengaturan memiliki tombol Simpan Perubahan dan konfirmasi sebelum perubahan penting diterapkan.
+
+Sediakan histori perubahan kebijakan yang mencatat:
+- Nama pengaturan.
+- Nilai sebelum perubahan.
+- Nilai sesudah perubahan.
+- Admin yang mengubah.
+- Tanggal dan jam.
+
+# 7. LAPORAN DAN MONITORING
+
+Buat halaman laporan untuk Owner.
+
+Jenis laporan:
+
+**A. Laporan Member**
+- Jumlah seluruh member.
+- Member baru.
+- Member aktif.
+- Member tidak aktif.
+- Pertumbuhan member.
+
+**B. Laporan Kunjungan**
+- Jumlah kunjungan harian.
+- Jumlah kunjungan mingguan.
+- Jumlah kunjungan bulanan.
+- Member paling sering berkunjung.
+
+**C. Laporan Loyalty Point**
+- Total poin diberikan.
+- Total poin ditukarkan.
+- Total poin tersisa.
+- Bonus poin.
+- Poin kedaluwarsa.
+
+**D. Laporan Reward**
+- Hadiah paling diminati.
+- Jumlah penukaran.
+- Reward yang sudah diberikan.
+- Reward yang masih tersedia.
+
+**E. Laporan Ranking**
+- Ranking bulanan.
+- Ranking tahunan.
+- Riwayat pemenang.
+- Total kunjungan setiap member.
+
+Sediakan filter tanggal dan fitur ekspor CSV/Excel serta PDF untuk laporan yang relevan.
+
+# 8. STRUKTUR NAVIGASI APLIKASI
+
+## Navigasi Admin
+
+- Dashboard.
+- Manajemen Member.
+- Transaksi & Verifikasi.
+- Loyalty Point.
+- Reward Management.
+- Customer Ranking.
+- Pengumuman.
+- Laporan.
+- Pengaturan.
+- Manajemen Akun.
+- Activity Logs.
+
+## Navigasi Member
+
+- Beranda.
+- Kartu Member.
+- Catat Pembelian.
+- Poin Saya.
+- Rewards.
+- Ranking Member.
+- Pengumuman.
+- Profil.
+- Logout.
+
+Pada tampilan smartphone, gunakan bottom navigation yang nyaman dijangkau.
+
+# 9. STRUKTUR DATABASE
+
+Gunakan database permanen dan relasional/logis yang memastikan data antarfitur terhubung.
+
+Apabila menggunakan Firebase, manfaatkan Firebase Authentication untuk autentikasi, Cloud Firestore untuk penyimpanan data, dan Firebase Storage untuk file atau gambar.
+
+Buat struktur koleksi atau tabel berikut:
+
+**1. USERS**
+- userId
+- email
+- password authentication reference
+- role
+- status
+- createdAt
+
+**2. MEMBERS**
+- memberId
+- userId
+- fullName
+- phone
+- photo
+- joinDate
+- memberStatus
+- totalPoints
+- totalVisits
+- qrCode
+- createdAt
+- updatedAt
+
+**3. TRANSACTIONS**
+- transactionId
+- memberId
+- transactionDate
+- transactionAmount
+- purchasedItems
+- calculatedPoints
+- approvedPoints
+- verificationStatus
+- verifiedBy
+- verifiedAt
+- receiptImage
+- visitCountStatus
+
+**4. POINT_LEDGER**
+- ledgerId
+- memberId
+- transactionId
+- activityType
+- pointIn
+- pointOut
+- balanceAfter
+- description
+- createdAt
+- createdBy
+
+**5. POINT_POLICIES**
+- policyId
+- policyName
+- calculationMethod
+- minimumPurchase
+- earningRules
+- maximumPoints
+- expirySettings
+- startDate
+- endDate
+- isActive
+- updatedAt
+
+**6. REWARDS**
+- rewardId
+- rewardName
+- description
+- image
+- requiredPoints
+- stock
+- validityPeriod
+- isActive
+- createdAt
+
+**7. REDEMPTIONS**
+- redemptionId
+- memberId
+- rewardId
+- pointsUsed
+- redemptionCode
+- status
+- approvedBy
+- redeemedAt
+
+**8. RANKINGS**
+- rankingId
+- memberId
+- period
+- totalVisits
+- totalPoints
+- rankPosition
+- awardStatus
+
+**9. ANNOUNCEMENTS**
+- announcementId
+- title
+- content
+- image
+- publishDate
+- expiryDate
+- targetAudience
+- status
+- createdBy
+
+**10. AWARDS**
+- awardId
+- memberId
+- period
+- rank
+- rewardDescription
+- status
+- givenAt
+
+**11. ACTIVITY_LOGS**
+- logId
+- userId
+- activity
+- description
+- timestamp
+
+Gunakan transaksi database yang aman untuk proses penambahan dan pengurangan poin. Saldo member harus konsisten dengan catatan point ledger.
+
+# 10. KEAMANAN DAN VALIDASI
+
+Sistem wajib mempunyai:
+
+- Login dan logout yang aman.
+- Hak akses berdasarkan role.
+- Password tidak disimpan sebagai teks biasa.
+- Validasi input.
+- Proteksi akses halaman admin.
+- Validasi transaksi sebelum poin diberikan.
+- Pencegahan transaksi ganda.
+- Pencegahan penukaran poin berulang.
+- Riwayat aktivitas admin.
+- Konfirmasi sebelum menghapus data penting.
+- Backup atau mekanisme pemulihan data.
+- QR Code unik setiap member.
+- Pengamanan file bukti transaksi.
+- Perlindungan data pribadi member.
+
+Jangan hanya mengandalkan validasi di tampilan frontend. Semua pemeriksaan penting harus dilakukan di backend.
+
+# 11. RESPONSIVE DESIGN
+
+Aplikasi wajib berjalan optimal di:
+
+- Smartphone Android.
+- iPhone.
+- Tablet.
+- Laptop.
+- Desktop.
+
+Prioritaskan pengalaman member melalui smartphone karena pelanggan kemungkinan besar menggunakan HP ketika mengakses kartu dan poin.
+
+Untuk admin, buat dashboard desktop yang memiliki sidebar, ringkasan statistik, grafik, dan tabel data. Pada layar smartphone, sidebar berubah menjadi menu navigasi yang ringkas.
+
+# 12. ALUR PENGGUNAAN UTAMA
+
+**ALUR 1 – MEMBER BARU**
+
+Pelanggan membuka halaman pendaftaran → mengisi nama dan nomor WhatsApp → sistem membuat akun → sistem menerbitkan ID member → pelanggan login → kartu member digital tersedia.
+
+**ALUR 2 – MENGUMPULKAN POIN**
+
+Member datang ke restoran → melakukan pembelian → login → klik Catat Pembelian → masukkan nominal → sistem menghitung estimasi poin → kirim permintaan → kasir memverifikasi → poin masuk ke akun.
+
+**ALUR 3 – MENUKARKAN HADIAH**
+
+Member membuka Rewards → memilih hadiah → sistem memeriksa saldo → member mengajukan penukaran → kasir memverifikasi → poin dikurangi → hadiah diberikan.
+
+**ALUR 4 – RANKING PELANGGAN**
+
+Member melakukan transaksi → transaksi disetujui → jumlah kunjungan diperbarui → sistem memperbarui ranking → Top 3 ditampilkan → admin menetapkan penghargaan.
+
+**ALUR 5 – PENGUMUMAN**
+
+Admin membuat informasi → admin menerbitkan → pengumuman tampil pada dashboard member → member dapat membaca informasi tersebut.
+
+# 13. OUTPUT YANG HARUS DIHASILKAN
+
+Bangun aplikasi web yang benar-benar berfungsi, bukan sekadar desain UI atau prototype statis.
+
+Prioritaskan hasil berikut:
+
+1. Landing page sederhana dengan identitas Top Ampera.
+2. Halaman login dan pendaftaran member.
+3. Dashboard Admin.
+4. Dashboard Kasir.
+5. Dashboard Member.
+6. Digital Member Card.
+7. Sistem Loyalty Point.
+8. Sistem Pengajuan dan Verifikasi Transaksi.
+9. Sistem Reward dan Penukaran Poin.
+10. Customer Ranking Top 1, 2, dan 3.
+11. Announcement Center.
+12. Laporan dan Monitoring.
+13. Sistem Pengaturan Kebijakan.
+14. Fitur cetak kartu member profesional.
+
+Pastikan seluruh tombol, formulir, filter, tabel, navigasi, dan fitur memiliki fungsi nyata.
+
+Jangan membuat tombol yang hanya menjadi dekorasi.
+
+Jangan menggunakan data dummy sebagai data permanen. Untuk demonstrasi awal, data contoh boleh digunakan secara terpisah dan harus dapat dihapus.
+
+Buat mekanisme inisialisasi awal untuk membuat akun Owner secara aman. Jangan membuat akun admin dengan password default yang terbuka untuk publik.
+
+# 14. PRIORITAS PENGEMBANGAN
+
+**PRIORITAS 1 – SISTEM INTI**
+- Login dan hak akses.
+- Manajemen member.
+- Kartu member digital.
+- Sistem poin.
+- Pengajuan dan verifikasi pembelian.
+- Riwayat poin.
+
+**PRIORITAS 2 – LOYALTY DAN PENGHARGAAN**
+- Reward.
+- Penukaran poin.
+- Customer Ranking.
+- Penghargaan Top 3.
+- Pengumuman.
+
+**PRIORITAS 3 – MONITORING DAN PENGEMBANGAN**
+- Laporan.
+- Grafik statistik.
+- Activity Logs.
+- Export PDF/Excel.
+- Pengaturan lanjutan.
+
+# 15. INSTRUKSI AKHIR UNTUK GOOGLE AI STUDIO
+
+Bertindaklah sebagai Senior Full-Stack Developer, UI/UX Designer, Database Architect, dan Product Designer.
+
+Bangun aplikasi TOP AMPERA LOYALTY & MEMBER POINT SYSTEM sesuai seluruh spesifikasi di atas.
+
+Perhatikan beberapa hal penting:
+
+1. Desain harus mengikuti identitas visual website Top Ampera yang dijadikan referensi, khususnya kombinasi maroon, gold, cream, dan putih.
+2. Buat antarmuka premium, profesional, modern, dan mobile-friendly.
+3. Utamakan kemudahan penggunaan bagi pelanggan restoran yang tidak terbiasa dengan aplikasi digital.
+4. Pastikan sistem poin sepenuhnya dapat diatur dari dashboard Owner.
+5. Pastikan proses penambahan poin memiliki verifikasi agar tidak mudah dimanipulasi.
+6. Ranking harus berdasarkan kunjungan yang sudah tervalidasi.
+7. Sistem kartu member harus dapat diunduh dan dicetak dengan ukuran profesional.
+8. Setiap data harus tersimpan secara permanen dan terhubung antarfitur.
+9. Semua hak akses harus benar-benar berfungsi.
+10. Buat kode yang terstruktur, modular, mudah dikembangkan, dan mudah dipelihara.
+
+Mulailah dengan membangun fondasi aplikasi, database, autentikasi, sistem role, serta desain UI utama. Lanjutkan dengan mengimplementasikan seluruh fitur secara bertahap tanpa menghilangkan kebutuhan yang sudah ditetapkan dalam PRD.
+
+**HASIL AKHIR YANG DIHARAPKAN:**
+
+Sebuah aplikasi membership dan customer loyalty profesional untuk Top Ampera yang mampu mengelola member, memberikan poin setiap pembelian, menghadirkan hadiah yang menarik, memantau pelanggan paling loyal, memberikan penghargaan Top 3, serta menyediakan kartu member digital yang dapat dicetak.
+
+Aplikasi ini diharapkan menjadi sarana untuk meningkatkan loyalitas dan kunjungan pelanggan Top Ampera dalam jangka panjang.

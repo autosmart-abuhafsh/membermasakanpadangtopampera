@@ -1,0 +1,6 @@
+{
+  "name": "Top Ampera Loyalty & Member Point System",
+  "description": "Sistem Membership, Reward Poin, Ranking Pelanggan, dan Penghargaan Loyalitas untuk Top Ampera Masakan Padang Kota Wisata Batu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
